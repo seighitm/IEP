@@ -11,12 +11,12 @@ private:
 public:
 	Circle(); // default constructor
 	~Circle() override; // destructor
-	Circle(double r, std::string c); // constructor
+	Circle(double, std::string); // constructor
 	Circle(const Circle&) = delete; // disable copy constructor
 	Circle& operator=(const Circle&) = delete; // disable copy assignment
-	friend std::ostream& operator<<(std::ostream& os, const Circle& c);
+	friend std::ostream& operator<<(std::ostream&, const Circle&);
 	double get_square() override;
 	double get_perimeter() override;
-	void set_radius(double r); // setter
+	void set_radius(double); // setter
 	double get_radius() const; // getter
 };

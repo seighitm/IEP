@@ -10,10 +10,10 @@ protected:
 public:
 	Figure(); // default constructor
 	virtual ~Figure(); // destructor
-	explicit Figure(std::string c); // constructor
-	Figure& operator =(const Figure& f);
+	explicit Figure(std::string); // constructor
+	Figure& operator =(const Figure&);
 	virtual double get_square() = 0;
 	virtual double get_perimeter() = 0;
 	std::string get_name() const; // getter
-	void set_name(std::string n); // setter
+	void set_name(std::string); // setter
 };
