@@ -8,7 +8,7 @@ set(PROJECT_NAME "main")
 project(${PROJECT_NAME} LANGUAGES CXX)  
 
 # Collect all files in one list by regular expression
-file(GLOB CPPS "./src/*.cpp" "./inc/*.hpp")
+file(GLOB FILES "./src/*.cpp" "./inc/*.hpp")
 
 # Define the executable
-add_executable(${PROJECT_NAME} ${CPPS})
+add_executable(${PROJECT_NAME} ${FILES})
