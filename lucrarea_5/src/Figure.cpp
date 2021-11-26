@@ -8,14 +8,8 @@ Figure::Figure() : _name("Figure")
 // Have assignment operators return a reference to *this.
 Figure& Figure::operator=(const Figure& f)
 {
-	std::cout << "FIGURE:\t\tCopy assignment of <" << this->get_name() << "> called! ";
-	if (this == &f)
-	{
-		std::cout << "Assignment to self!";
-		return *this;
-	}
-	std::cout << std::endl;
-	_name = f.get_name();
+	if (this != &f)
+		_name = f.get_name();
 	return *this;
 }
 

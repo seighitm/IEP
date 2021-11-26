@@ -1,5 +1,4 @@
 #pragma once
-#include "Coordinates.hpp"
 #include "Figure.hpp"
 
 class Rectangle final : public Figure

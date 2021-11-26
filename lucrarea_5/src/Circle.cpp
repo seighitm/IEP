@@ -34,10 +34,8 @@ Circle& Circle::operator=(const Circle& c)
 	Figure::operator=(c);
 
 	const Coordinates* prev_coordinates = _coordinates;
-	_coordinates = c._coordinates;
-
-	if (_coordinates != nullptr)
-		delete prev_coordinates;
+	_coordinates = c.get_coordinates();
+	delete prev_coordinates;
 
 	_radius = c.get_radius();
 	_name = c.get_name();
@@ -73,10 +71,10 @@ double Circle::get_radius() const
 
 Coordinates* Circle::get_coordinates() const
 {
-	return this->_coordinates;
+	return _coordinates;
 }
 
 void Circle::set_coordinates(Coordinates* c)
 {
-	this->_coordinates = c;
+	_coordinates = c;
 }
