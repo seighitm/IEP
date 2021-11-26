@@ -34,7 +34,7 @@ Circle& Circle::operator=(const Circle& c)
 	Figure::operator=(c);
 
 	const Coordinates* prev_coordinates = _coordinates;
-	_coordinates = c.get_coordinates();
+	_coordinates = new Coordinates(*c.get_coordinates());
 	delete prev_coordinates;
 
 	_radius = c.get_radius();

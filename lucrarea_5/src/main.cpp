@@ -9,16 +9,20 @@ int main()
 	Rectangle r1;
 	r1.set_name("rectangle_1");
 	Rectangle r2(12, 25, "rectangle_2");
+	Rectangle r3;
+	r3 = r0;
 
 	std::cout << "[ ]\t\tRECTANGLE 0 BEFORE: " << r0 << std::endl;
 	std::cout << "[ ]\t\tRECTANGLE 1 BEFORE: " << r1 << std::endl;
 	std::cout << "[ ]\t\tRECTANGLE 2 BEFORE: " << r2 << std::endl;
+	std::cout << "[ ]\t\tRECTANGLE 2 BEFORE: " << r3 << std::endl;
 
 	r2 = r1 = r0;
 
 	std::cout << "[ ]\t\tRECTANGLE 0 AFTER: " << r0 << std::endl;
 	std::cout << "[ ]\t\tRECTANGLE 1 AFTER: " << r1 << std::endl;
 	std::cout << "[ ]\t\tRECTANGLE 2 AFTER: " << r2 << std::endl;
+	std::cout << "[ ]\t\tRECTANGLE 2 AFTER: " << r3 << std::endl;
 
 	std::cout << "##########################################################################" << std::endl << std::endl;
 	std::cout << "###############   Handle assignment to self in operator=.  ###############" << std::endl;

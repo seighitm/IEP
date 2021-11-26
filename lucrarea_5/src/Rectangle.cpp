@@ -10,7 +10,7 @@ Rectangle::~Rectangle()
 	std::cout << "RECTANGLE:\tDestruct <" << this->get_name() << "> called!" << std::endl;
 }
 
-Rectangle::Rectangle(const double w, const double h, const std::string c) : Figure(c), _width(w), _height(h)
+Rectangle::Rectangle(const double h, const double w, const std::string c) : Figure(c), _width(w), _height(h)
 {
 	std::cout << "RECTANGLE:\tConstructor of <" << this->get_name() << "> called!" << std::endl;
 }
@@ -30,7 +30,7 @@ std::ostream& operator<<(std::ostream& os, const Rectangle& r)
 Rectangle& Rectangle::operator=(const Rectangle& r)
 {
 	std::cout << "RECTANGLE:\tCopy assignment of <" << this->get_name() << "> called! " << std::endl;
-	Figure::operator=(r);
+	// Figure::operator=(r);
 	_height = r.get_height();
 	_width = r.get_width();
 	return *this;
